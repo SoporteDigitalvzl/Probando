@@ -1,275 +1,307 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreadorTools AI - Kit Profesional de Contenido</title>
+    <title>CreadorTools AI - Enterprise Content Suite</title>
     <style>
-        /* Estilos Base - Modo Oscuro Premium Fijo */
+        /* Paleta Comercial Premium - Slate & Neon Accent */
         :root {
-            --bg-body: #090d16;
-            --bg-card: #131a26;
-            --bg-input: #0d131f;
-            --text-main: #f1f5f9;
+            --bg-main: #0b0f19;
+            --bg-surface: #141b2b;
+            --bg-field: #090d16;
+            --text-main: #f8fafc;
             --text-muted: #64748b;
-            --border-color: #1e293b;
-            --accent: #2563eb;
-            --accent-glow: rgba(37, 99, 235, 0.3);
-            --success: #10b981;
-            --shadow: rgba(0, 0, 0, 0.6);
+            --border-glow: #1e293b;
+            --brand-color: #3b82f6;
+            --brand-glow: rgba(59, 130, 246, 0.25);
+            --neon-success: #10b981;
+            --shadow-matrix: rgba(0, 0, 0, 0.5);
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg-body);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-main);
             color: var(--text-main);
             margin: 0;
-            padding: 24px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-        }
-
-        .top-bar {
-            max-width: 680px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
             box-sizing: border-box;
         }
 
-        .brand-logo {
-            font-weight: 800;
-            font-size: 20px;
-            color: var(--accent);
+        /* Contenedor Arquitectónico SaaS */
+        .app-wrapper {
+            max-width: 720px;
+            width: 100%;
+            background: var(--bg-surface);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px var(--shadow-matrix);
+            box-sizing: border-box;
+            border: 1px solid var(--border-glow);
+            transition: border-color 0.3s ease;
+        }
+
+        .app-wrapper:hover {
+            border-color: #27354d;
+        }
+
+        /* Header del Ecosistema */
+        .app-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--brand-color);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .container {
-            max-width: 680px;
-            width: 100%;
-            background: var(--bg-card);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px -10px var(--shadow);
-            box-sizing: border-box;
-            border: 1px solid var(--border-color);
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         h1 {
-            margin: 0 0 10px 0;
-            font-size: 28px;
+            margin: 0 0 12px 0;
+            font-size: 32px;
             font-weight: 800;
-            text-align: center;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.75px;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            text-align: center;
             color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 35px;
+            font-size: 15px;
+            margin: 0;
         }
-
-        .form-row {
+        /* Formulario Avanzado */
+        .grid-inputs {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
-        @media (max-width: 500px) {
-            .form-row { grid-template-columns: 1fr; }
+        @media (max-width: 550px) {
+            .grid-inputs { grid-template-columns: 1fr; gap: 15px; }
         }
 
-        .form-group {
+        .field-group {
             display: flex;
             flex-direction: column;
         }
 
         label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 11px;
+            color: var(--text-muted);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         input[type="text"], select {
             width: 100%;
-            padding: 14px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-input);
+            padding: 16px;
+            border: 1px solid var(--border-glow);
+            background: var(--bg-field);
             color: var(--text-main);
-            border-radius: 10px;
+            border-radius: 12px;
             box-sizing: border-box;
             font-size: 15px;
             outline: none;
-            transition: all 0.2s;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         input[type="text"]:focus, select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 12px var(--accent-glow);
+            border-color: var(--brand-color);
+            box-shadow: 0 0 0 4px var(--brand-glow);
         }
 
-        button.btn-primary {
+        /* Botón de Ejecución de Alta Retención */
+        .btn-trigger {
             width: 100%;
-            background: var(--accent);
+            background: var(--brand-color);
             color: #ffffff;
             border: none;
-            padding: 16px;
-            border-radius: 10px;
+            padding: 18px;
+            border-radius: 12px;
             font-weight: 700;
             cursor: pointer;
             font-size: 16px;
             transition: all 0.2s;
-            box-shadow: 0 6px 20px var(--accent-glow);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
         }
 
-        button.btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 25px var(--accent-glow);
+        .btn-trigger:hover {
+            background: #2563eb;
+            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.35);
         }
 
-        button.btn-primary:disabled {
-            background: var(--border-color);
+        .btn-trigger:disabled {
+            background: #1e293b;
             color: var(--text-muted);
             cursor: not-allowed;
-            transform: none;
             box-shadow: none;
         }
 
-        .result-box {
-            margin-top: 35px;
-            padding: 24px;
-            background: var(--bg-input);
-            border-radius: 12px;
+        /* Módulo Consolidado de Respuestas */
+        .workspace-result {
+            margin-top: 40px;
+            padding: 28px;
+            background: var(--bg-field);
+            border-radius: 16px;
             display: none;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border-glow);
         }
 
-        .result-header {
+        .workspace-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 14px;
         }
 
-        .result-box h3 {
+        .workspace-header h3 {
             margin: 0;
-            color: var(--success);
-            font-size: 16px;
+            color: var(--neon-success);
+            font-size: 15px;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .action-buttons {
+        .panel-actions {
             display: flex;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .btn-action {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
+        .btn-action-tool {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glow);
             color: var(--text-main);
-            padding: 6px 12px;
-            border-radius: 6px;
+            padding: 8px 14px;
+            border-radius: 8px;
             font-size: 12px;
             font-weight: 600;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s;
         }
 
-        .btn-action:hover {
-            border-color: var(--accent);
+        .btn-action-tool:hover {
+            border-color: var(--brand-color);
+            background: rgba(59, 130, 246, 0.05);
         }
 
-        .output-text {
+        .output-stream {
             white-space: pre-line;
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--text-main);
+            font-size: 15px;
+            line-height: 1.75;
+            color: #cbd5e1;
         }
 
-        .footer-branding {
-            margin-top: 40px;
+        /* Pie de Página de Nivel Corporativo */
+        .corporate-footer {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 720px;
             text-align: center;
-            border-top: 1px solid var(--border-color);
-            padding-top: 25px;
-            font-size: 13px;
+            border-top: 1px solid var(--border-glow);
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 15px;
+        }
+
+        .footer-nav a {
             color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .footer-branding a {
-            color: var(--accent);
             text-decoration: none;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 600;
+            transition: color 0.2s;
         }
 
-        .footer-branding a:hover {
-            text-decoration: underline;
+        .footer-nav a:hover {
+            color: var(--brand-color);
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: #475569;
+            margin: 0;
+            letter-spacing: 0.25px;
         }
     </style>
 </head>
 <body>
 
-<div class="top-bar">
-    <div class="brand-logo">⚡ CreadorTools Pro</div>
-</div>
-
-<div class="container">
-    <h1>Optimiza tu Contenido con IA</h1>
-    <p class="subtitle">Infraestructura corporativa de Inteligencia Artificial libre para creadores</p>
+<div class="app-wrapper">
+    <div class="app-header">
+        <span class="brand-badge">Enterprise Edition</span>
+        <h1>CreadorTools AI</h1>
+        <p class="subtitle">Infraestructura autónoma de Inteligencia Artificial para optimización de audiencias</p>
+    </div>
     
-    <div class="form-row">
-        <div class="form-group">
-            <label for="topic">¿De qué trata tu contenido o video?</label>
-            <input type="text" id="topic" placeholder="Ej. recetas fáciles, trucos de barbería, tecnología...">
+    <div class="grid-inputs">
+        <div class="field-group">
+            <label for="topic">Descripción del Contenido o Nicho</label>
+            <input type="text" id="topic" placeholder="Ej. hacks financieros de inversión, rutinas de gimnasio...">
         </div>
 
-        <div class="form-group">
-            <label for="tool-type">Módulo IA:</label>
+        <div class="field-group">
+            <label for="tool-type">Estrategia IA</label>
             <select id="tool-type">
                 <option value="hooks">3 Ganchos Virales</option>
-                <option value="script">Guión de Retención</option>
-                <option value="seo">Etiquetas y SEO</option>
+                <option value="script">Guión Corporativo</option>
+                <option value="seo">Optimización SEO</option>
             </select>
         </div>
     </div>
 
-    <button id="btnGenerate" class="btn-primary" onclick="generateAIContent()">Generar Análisis Estratégico 🤖</button>
+    <button id="btnGenerate" class="btn-trigger" onclick="generateAIContent()">Ejecutar Análisis Estratégico 🤖</button>
 
-    <div id="resultBox" class="result-box">
-        <div class="result-header">
-            <h3>✨ Respuesta Estratégica en Vivo:</h3>
-            <div class="action-buttons">
-                <button class="btn-action" onclick="copyToClipboard()">📋 Copiar</button>
-                <button class="btn-action" style="color:#ef4444;" onclick="clearOutput()">🗑️ Limpiar</button>
+    <div id="resultBox" class="workspace-result">
+        <div class="workspace-header">
+            <h3>✨ Contenido Generado en Tiempo Real</h3>
+            <div class="panel-actions">
+                <button class="btn-action-tool" onclick="copyToClipboard()">📋 Copiar</button>
+                <button class="btn-action-tool" style="color:#ef4444; border-color: rgba(239,68,68,0.2);" onclick="clearOutput()">🗑️ Limpiar</button>
             </div>
         </div>
-        <div id="outputText" class="output-text">Procesando...</div>
-    </div>
-
-    <div class="footer-branding">
-        <p>Desarrollado de manera independiente y honesta bajo código optimizado desde Venezuela.</p>
-        <p>Plataforma libre: Sin almacenar registros de usuario ni imponer cuotas de límite diarias.</p>
-        <p>👉 <strong><a href="https://t.me" target="_blank">Únete a nuestra comunidad de Telegram</a></strong> para dar feedback o apoyarnos vía Pago Móvil / Binance Pay.</p>
+        <div id="outputText" class="output-stream">Procesando...</div>
     </div>
 </div>
 
+<div class="corporate-footer">
+    <div class="footer-nav">
+        <a href="https://t.me" target="_blank">Canal de Soporte</a>
+        <a href="#" onclick="alert('Sistema distribuido basado en modelos abiertos globales. Sin almacenamiento de logs.')">Políticas de Privacidad</a>
+        <a href="https://t.me" target="_blank">Canales de Monetización</a>
+    </div>
+    <p class="footer-copyright">&copy; 2026 CreadorTools AI. Desarrollado de manera independiente desde Venezuela mediante optimización de hardware libre.</p>
+</div>
 <script>
-// Funciones de utilidad estática para la interfaz
 function copyToClipboard() {
     const text = document.getElementById('outputText').innerText;
     navigator.clipboard.writeText(text).then(() => {
-        alert("¡Copiado al portapapeles! 📋");
+        alert("Contenido copiado al portapapeles con éxito. 📋");
     });
 }
 
@@ -279,7 +311,7 @@ function clearOutput() {
     document.getElementById('topic').focus();
 }
 
-// CONEXIÓN DIRECTA CORREGIDA Y LIBRE DE RESTRICCIONES DE DOMINIO
+// CONEXIÓN DIRECTA ULTRA VELOZ MEDIANTE PASARELA COMPATIBLE CON CORS
 async function generateAIContent() {
     const topic = document.getElementById('topic').value.trim();
     const type = document.getElementById('tool-type').value;
@@ -288,51 +320,52 @@ async function generateAIContent() {
     const btn = document.getElementById('btnGenerate');
 
     if (!topic) {
-        alert("Por favor, introduce una temática válida.");
+        alert("Por favor, introduce una temática válida para iniciar la inferencia.");
         return;
     }
 
     btn.disabled = true;
-    btn.innerText = "Pensando estratégicamente... 🧠";
+    btn.innerText = "Sincronizando con clúster de IA... 🧠";
     resultBox.style.display = "block";
-    outputText.innerText = "Conectando de forma segura con la red abierta de IA...";
+    outputText.innerText = "Buscando nodo libre y redactando tu contenido estratégico...";
 
-    let userPrompt = "";
+    let promptContext = "";
     if (type === "hooks") {
-        userPrompt = `Genera 3 ganchos virales únicos para redes sociales sobre el tema: "${topic}". Que sean muy creativos y específicos de ese nicho. Responde directamente en español, sin preámbulos ni explicaciones.`;
+        promptContext = `Actúa como un estratega de contenido viral experto. Genera exactamente 3 ganchos o títulos de alta retención para redes sociales sobre el tema específico: "${topic}". Asegúrate de que apunten a la curiosidad humana y rompan el scroll. Responde directo en español, enumerados, sin textos introductorios, ni notas aclaratorias, ni saludos de ningún tipo.`;
     } else if (type === "script") {
-        userPrompt = `Escribe un guión dinámico para TikTok de menos de 60 segundos sobre el tema: "${topic}". Incluye sugerencias de escena e indicaciones visuales en corchetes. Responde directo en español.`;
+        promptContext = `Escribe un guión dinámico completo para formato vertical (TikTok/Reels) de menos de 60 segundos sobre el tema: "${topic}". Debe incluir especificaciones visuales claras de escena entre corchetes [Ejemplo] y un diálogo altamente persuasivo con llamado a la acción integrado. Responde directo al grano en español, omitiendo saludos o explicaciones iniciales.`;
     } else if (type === "seo") {
-        userPrompt = `Haz un análisis de etiquetas y SEO para redes sociales sobre: "${topic}". Devuelve un título clickeable, palabras clave e hiper-tags relevantes. Responde directo en español.`;
+        promptContext = `Realiza un análisis estratégico de optimización SEO enfocado en redes sociales para la temática: "${topic}". Devuelve un título optimizado para el algoritmo de búsqueda, un listado de palabras clave esenciales y un bloque limpio de hashtags de alto impacto. Responde directo en español, sin preámbulos.`;
     }
 
     try {
-        // Conexión mediante un endpoint alternativo directo y público que no bloquea la URL de origen
-        const response = await fetch("https://openrouter.ai", {
+        // Consultamos a través de la pasarela abierta de procesamiento de texto estructurado de Pollinations
+        const response = await fetch("https://pollinations.ai", {
             method: "POST",
-            headers: {
+            headers: { 
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                model: "meta-llama/llama-3-8b-instruct:free",
                 messages: [
-                    { role: "system", content: "Eres un redactor experto en marketing digital. Respondes siempre de forma concisa, directa al grano, en español, omitiendo saludos, introducciones o comentarios extra." },
-                    { role: "user", content: userPrompt }
-                ]
+                    { role: "system", content: "Eres un redactor analítico de marketing digital. Tu única función es dar el resultado final requerido de inmediato, usando un tono profesional, directo, en español y sin adornos contextuales." },
+                    { role: "user", content: promptContext }
+                ],
+                model: "openai", // Enrutador inteligente balanceado de baja latencia
+                private: true
             })
         });
 
-        const data = await response.json();
+        const textData = await response.text();
         
-        if (data && data.choices && data.choices[0] && data.choices[0].message) {
-            outputText.innerText = data.choices[0].message.content.trim();
+        if (textData && textData.trim().length > 0) {
+            outputText.innerText = textData.trim();
         } else {
-            outputText.innerText = "El servidor público está respondiendo con lentitud en este instante. Por favor, vuelve a presionar el botón.";
+            outputText.innerText = "Error interno: El clúster remoto de IA devolvió una respuesta vacía. Reintenta la operación.";
         }
 
     } catch (error) {
-        console.error(error);
-        outputText.innerText = "Conexión completada, pero el clúster de IA libre requiere reintentar la petición. Presiona el botón de generar nuevamente.";
+        console.error("Detalle técnico del error:", error);
+        outputText.innerText = "Error crítico en el canal de comunicación seguro: " + error.message + ". Intenta refrescar el software presionando Control + F5.";
     } finally {
         btn.disabled = false;
         btn.innerText = "Generar Análisis Estratégico 🤖";
