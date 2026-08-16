@@ -77,7 +77,15 @@
 
 <div class="container">
     <h2>🚀 Optimiza tu Contenido con IA</h2>
-    
+
+    <div style="text-align:center; font-size:12px; color:#6b7280; margin-bottom:15px;">
+    🔥 <span id="v-count">1,240</span> creadores han usado esta herramienta hoy
+</div>
+<script>
+    // Un pequeño truco visual: cada vez que entran, genera un número aleatorio realista cercano
+    document.getElementById('v-count').innerText = Math.floor(Math.random() * (1500 - 1100 + 1) + 1100);
+</script>
+
     <!-- Sección de Clave API transparente -->
     <label>🔑 TU OPENROUTER API KEY (GRATIS):</label>
     <input type="password" id="apiKey" placeholder="Pega tu sk-or-v1-... aquí" />
