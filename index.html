@@ -1,109 +1,229 @@
-        <section class="portfolio">
-            <h2>// Casos de Éxito & Portafolio (Nexus Syntax)</h2>
-            <div class="portfolio-grid">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Syntax Solutions</title>
+    <style type="text/css">
+        body {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 1rem;
+            letter-spacing: 5px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        .hero {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #e2e8f0;
+            font-weight: 300;
+        }
+        .hero span {
+            color: #00f2fe;
+            font-weight: bold;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            border-bottom: 2px solid #1e3a8a;
+            padding-bottom: 8px;
+            color: #4facfe;
+            margin-top: 40px;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .item {
+            background-color: #0a0c14;
+            border: 1px solid #1e3a8a;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        .item:hover {
+            border-color: #00f2fe;
+        }
+        .tag {
+            background: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        .box-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+            background: #020408;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        @media (max-width: 768px) {
+            .box-container { grid-template-columns: 1fr; }
+        }
+        .box h5 {
+            margin: 0 0 5px 0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        .before h5 { color: #ef4444; }
+        .after h5 { color: #10b981; }
+        .box p {
+            margin: 0;
+            font-size: 0.9rem;
+            font-family: monospace;
+        }
+        .before p { color: #94a3b8; }
+        .after p { color: #ffffff; }
+        .cta {
+            text-align: center;
+            background: #0a0c14;
+            border: 1px solid #00f2fe;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+        }
+        .btn {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: #000000;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            border-top: 1px solid #1e3a8a;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
 
-                <!-- CASO 1: LOCALIZACIÓN ESPAÑA -->
-                <div class="portfolio-item">
-                    <span class="tag">Localización Regional / España</span>
-                    <div class="item-title">Adaptación de Interfaz de Usuario (UI/UX) — BitRemesas Inc.</div>
-                    <p><strong>Desafío:</strong> El cliente lanzó su aplicación de custodia cripto en Madrid, pero los textos originales usaban modismos de Latinoamérica que generaban fricción y desconfianza en los usuarios locales.</p>
-                    <p><strong>Solución:</strong> Reescritura completa de los flujos de depósito, retiro y configuración, alineando el vocabulario al estándar bancario y tecnológico español.</p>
-                    <div class="comparison">
-                        <div class="comp-box box-before">
-                            <h5>Control de Calidad (Entrada)</h5>
-                            <p>Chequea los balances desde tu computadora o celular para fondear tu cuenta rápido y evitar recargos en los costos.</p>
-                        </div>
-                        <div class="comp-box box-after">
-                            <h5>Producción Final (Entregado)</h5>
-                            <p>Consulta los balances desde tu ordenador o dispositivo móvil para traspasar fondos de forma inmediata y evitar costes adicionales.</p>
-                        </div>
+    <header>
+        <h1 class="logo">NEXUS SYNTAX</h1>
+        <div class="subtitle">SOLUTIONS</div>
+        <p class="hero">Transformamos borradores técnicos en contenido <span>impecable y profesional</span>. Sin errores. Sin demoras.</p>
+    </header>
+
+    <main>
+        <h2>// Casos de Éxito & Portafolio (Nexus Syntax)</h2>
+        <div class="grid">
+
+            <div class="item">
+                <span class="tag">Localización Regional / España</span>
+                <div class="title">Adaptación de Interfaz de Usuario (UI/UX) — BitRemesas Inc.</div>
+                <p><strong>Desafío:</strong> El cliente lanzó su aplicación en Madrid, pero los textos originales usaban modismos de Latinoamérica que restaban confianza al usuario local.</p>
+                <p><strong>Solución:</strong> Reescritura completa de los flujos de depósito, retiro y configuración, alineando el vocabulario al estándar bancario español.</p>
+                <div class="box-container">
+                    <div class="box before">
+                        <h5>Control de Calidad (Entrada)</h5>
+                        <p>Chequea los balances desde tu computadora o celular para fonear tu cuenta rápido y evitar recargos en los costos.</p>
                     </div>
-                </div>
-
-                <!-- CASO 2: WHITEPAPER WEB3 -->
-                <div class="portfolio-item">
-                    <span class="tag">Technical Review / DeFi</span>
-                    <div class="item-title">Optimización de Documentación Técnica — Protocolo Kinetix</div>
-                    <p><strong>Desafío:</strong> El borrador del Whitepaper de gobernanza fue redactado por los desarrolladores de la red. Tenía una sintaxis excesivamente informal y descuidos gramaticales que restaban seriedad ante firmas de capital de riesgo.</p>
-                    <p><strong>Solución:</strong> Corrección estilística y reestructuración de enunciados para proyectar autoridad institucional y claridad técnica.</p>
-                    <div class="comparison">
-                        <div class="comp-box box-before">
-                            <h5>Control de Calidad (Entrada)</h5>
-                            <p>Los contratos inteligentes hacen los swaps muy rápido y no tienen casi fallos automáticos para que no pierdas plata.</p>
-                        </div>
-                        <div class="comp-box box-after">
-                            <h5>Producción Final (Entregado)</h5>
-                            <p>Los contratos inteligentes ejecutan transacciones de intercambio automatizadas de alta velocidad, garantizando la mitigación de errores críticos y resguardando el capital del usuario.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CASO 3: REDACCIÓN WEB3 PARA REDES -->
-                <div class="portfolio-item">
-                    <span class="tag">Contenido de Alta Retención</span>
-                    <div class="item-title">Estrategia de Lanzamiento en X (Twitter) — Layer-2 Network</div>
-                    <p><strong>Desafío:</strong> Sintetizar una actualización muy compleja sobre la reducción de tarifas de gas en un hilo de X que capturara la atención de inversores institucionales y minoristas simultáneamente.</p>
-                    <p><strong>Solución:</strong> Redacción de un hilo técnico directo, estructurado con ganchos de lectura y libre de palabras de relleno.</p>
-                    <div class="comparison">
-                        <div class="comp-box box-before">
-                            <h5>Control de Calidad (Entrada)</h5>
-                            <p>Ya lanzamos la versión 2 de nuestra red. El gas va a ser mucho más barato y la velocidad va a ser más rápida desde hoy.</p>
-                        </div>
-                        <div class="comp-box box-after">
-                            <h5>Producción Final (Entregado)</h5>
-                            <p>El despliegue de nuestra Mainnet v2 es oficial. Reducimos los costes de gas en un 40% y optimizamos el procesamiento de bloques a 1.2 segundos. Descubre el impacto en tus transacciones. 👇</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CASO 4: CORPORATIVO / EMAIL MARKETING -->
-                <div class="portfolio-item">
-                    <span class="tag">Email Ops / Retención</span>
-                    <div class="item-title">Newsletter Semanal de Análisis Macroeconómico — CriptoAnalítica</div>
-                    <p><strong>Desafío:</strong> La tasa de apertura y retención de la firma caía debido a boletines redactados con expresiones demasiado coloquiales o alarmistas que no correspondían a un servicio de pago.</p>
-                    <p><strong>Solución:</strong> Reescritura bajo un estándar analítico, sobrio, enfocado en datos duros y proyecciones de mercado.</p>
-                    <div class="comparison">
-                        <div class="comp-box box-before">
-                            <h5>Control de Calidad (Entrada)</h5>
-                            <p>Hola a todos, el mercado hoy está re feo y cayendo pero acá les dejamos tres tips claves para que no pierdan su plata.</p>
-                        </div>
-                        <div class="comp-box box-after">
-                            <h5>Producción Final (Entregado)</h5>
-                            <p>A pesar de la volatilidad actual en los mercados financieros, identificamos tres tendencias estructurales clave para mitigar riesgos. Analizamos los datos en nuestro informe técnico semanal.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CASO 5: INFRAESTRUCTURA DE DOCUMENTACIÓN -->
-                <div class="portfolio-item">
-                    <span class="tag">Markdown Técnico</span>
-                    <div class="item-title">Manual de Integración API para Desarrolladores — DevSaaS</div>
-                    <p><strong>Desafío:</strong> El manual existente provocaba demasiados tickets de soporte porque las instrucciones de conexión eran ambiguas y estaban mal formateadas en texto plano.</p>
-                    <p><strong>Solución:</strong> Maquetación e ingeniería de texto utilizando Markdown estructurado para una lectura técnica ágil en repositorios o GitBook.</p>
-                    <div class="comparison">
-                        <div class="comp-box box-before">
-                            <h5>Control de Calidad (Entrada)</h5>
-                            <p>Dale click al botón de conectar arriba a la derecha y luego acepta el cartelito de Metamask para que te deje entrar.</p>
-                        </div>
-                        <div class="comp-box box-after">
-                            <h5>Producción Final (Entregado)</h5>
-                            <p>### Paso 1: Vinculación de Billetera<br>Seleccione **Conectar Billetera** en el margen superior derecho. Apruebe la solicitud de firma digital en la extensión del navegador (ej. MetaMask).</p>
-                        </div>
+                    <div class="box after">
+                        <h5>Producción Final (Entregado)</h5>
+                        <p>Consulta los balances desde tu ordenador o dispositivo móvil para traspasar fondos de forma inmediata y evitar costes adicionales.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="cta-box">
-            <div class="cta-inner">
-                <h3>¿Necesitas textos perfectos hoy mismo?</h3>
-                <p>Delega tus borradores. Recibe activos editoriales profesionales listos para publicar.</p>
-                <a href="https://laborx.com" class="btn-neon">Contratar en LaborX</a>
+            <div class="item">
+                <span class="tag">Technical Review / DeFi</span>
+                <div class="title">Optimización de Documentación Técnica — Protocolo Kinetix</div>
+                <p><strong>Desafío:</strong> El borrador del Whitepaper tenía una sintaxis excesivamente informal y descuidos gramaticales que restaban seriedad ante firmas de capital de riesgo.</p>
+                <p><strong>Solución:</strong> Corrección estilística y reestructuración de enunciados para proyectar autoridad institucional y claridad técnica.</p>
+                <div class="box-container">
+                    <div class="box before">
+                        <h5>Control de Calidad (Entrada)</h5>
+                        <p>Los contratos inteligentes hacen los swaps muy rápido y no tienen casi fallos automáticos para que no pierdas plata.</p>
+                    </div>
+                    <div class="box after">
+                        <h5>Producción Final (Entregado)</h5>
+                        <p>Los contratos inteligentes ejecutan transacciones de intercambio automatizadas de alta velocidad, garantizando la mitigación de errores críticos y resguardando el capital del usuario.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
 
-    <footer style="text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-neon); margin-top: 80px;">
-        <p>&copy; 2026 Nexus Syntax Solutions. Todos los derechos reservados.</p>
-        <p style="font-family: 'Courier New', Courier, monospace; color: #1e3a8a;">// HIGH-PRECISION CONTENT OPERATIONS // LATAM & SPAIN MARKET</p>
-    </footer>
+            <div class="item">
+                <span class="tag">Contenido de Alta Retención</span>
+                <div class="title">Estrategia de Lanzamiento en X (Twitter) — Layer-2 Network</div>
+                <p><strong>Desafío:</strong> Sintetizar una actualización muy compleja sobre la reducción de tarifas de gas en un hilo de X que capturara la atención de inversores institucionales y minoristas simultáneamente.</p>
+                <p><strong>Solución:</strong> Redacción de un hilo técnico directo, estructurado con ganchos de lectura y libre de palabras de relleno.</p>
+                <div class="box-container">
+                    <div class="box before">
+                        <h5>Control de Calidad (Entrada)</h5>
+                        <p>Ya lanzamos la versión 2 de nuestra red. El gas va a ser mucho más barato y la velocidad va a ser más rápida desde hoy.</p>
+                    </div>
+                    <div class="box after">
+                        <h5>Producción Final (Entregado)</h5>
+                        <p>El despliegue de nuestra Mainnet v2 es oficial. Reducimos los costes de gas en un 40% y optimizamos el procesamiento de bloques a 1.2 segundos. Descubre el impacto en tus transacciones. 👇</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <span class="tag">Email Ops / Retención</span>
+                <div class="title">Newsletter Semanal de Análisis Macroeconómico — CriptoAnalítica</div>
+                <p><strong>Desafío:</strong> La tasa de apertura caía debido a boletines redactados con expresiones demasiado coloquiales o alarmistas que no correspondían a un servicio de pago.</p>
+                <p><strong>Solución:</strong> Reescritura bajo un estándar analítico, sobrio, enfocado en datos duros y proyecciones de mercado.</p>
+                <div class="box-container">
+                    <div class="box before">
+                        <h5>Control de Calidad (Entrada)</h5>
+                        <p>Hola a todos, el mercado hoy está re feo y cayendo pero acá les dejamos tres tips claves para que no pierdan su plata.</p>
+                    </div>
+                    <div class="box after">
+                        <h5>Producción Final (Entregado)</h5>
+                        <p>A pesar de la volatilidad actual en los mercados financieros, identificamos tres tendencias estructurales clave para mitigar riesgos. Analizamos los datos en nuestro informe técnico semanal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <span class="tag">Markdown Técnico</span>
+                <div class="title">Manual de Integración API para Desarrolladores — DevSaaS</div>
+                <p><strong>Desafío:</strong> El manual existente provocaba demasiados tickets de soporte porque las instrucciones de conexión eran ambiguas y estaban mal formateadas en texto plano.</p>
