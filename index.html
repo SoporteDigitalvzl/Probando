@@ -1,401 +1,109 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreadorTools AI - Omni Hub Pro</title>
-    <style>
-        /* Variables Base del Sistema - Estética SaaS Premium */
-        :root {
-            --bg-main: #090d16;
-            --bg-card: #131a26;
-            --bg-input: #0d131f;
-            --text-main: #f1f5f9;
-            --text-muted: #64748b;
-            --border-color: #1e293b;
-            --success: #10b981;
-            --shadow: rgba(0, 0, 0, 0.6);
-            
-            /* Colores de acento iniciales (Azul por defecto) */
-            --accent: #2563eb;
-            --accent-glow: rgba(37, 99, 235, 0.3);
-        }
+        <section class="portfolio">
+            <h2>// Casos de Éxito & Portafolio (Nexus Syntax)</h2>
+            <div class="portfolio-grid">
 
-        /* Definición de los Temas Seleccionables */
-        [data-theme="blue"] { --accent: #2563eb; --accent-glow: rgba(37, 99, 235, 0.3); }
-        [data-theme="emerald"] { --accent: #10b981; --accent-glow: rgba(16, 185, 129, 0.3); }
-        [data-theme="purple"] { --accent: #8b5cf6; --accent-glow: rgba(139, 92, 246, 0.3); }
-        [data-theme="orange"] { --accent: #f97316; --accent-glow: rgba(249, 115, 22, 0.3); }
+                <!-- CASO 1: LOCALIZACIÓN ESPAÑA -->
+                <div class="portfolio-item">
+                    <span class="tag">Localización Regional / España</span>
+                    <div class="item-title">Adaptación de Interfaz de Usuario (UI/UX) — BitRemesas Inc.</div>
+                    <p><strong>Desafío:</strong> El cliente lanzó su aplicación de custodia cripto en Madrid, pero los textos originales usaban modismos de Latinoamérica que generaban fricción y desconfianza en los usuarios locales.</p>
+                    <p><strong>Solución:</strong> Reescritura completa de los flujos de depósito, retiro y configuración, alineando el vocabulario al estándar bancario y tecnológico español.</p>
+                    <div class="comparison">
+                        <div class="comp-box box-before">
+                            <h5>Control de Calidad (Entrada)</h5>
+                            <p>Chequea los balances desde tu computadora o celular para fondear tu cuenta rápido y evitar recargos en los costos.</p>
+                        </div>
+                        <div class="comp-box box-after">
+                            <h5>Producción Final (Entregado)</h5>
+                            <p>Consulta los balances desde tu ordenador o dispositivo móvil para traspasar fondos de forma inmediata y evitar costes adicionales.</p>
+                        </div>
+                    </div>
+                </div>
 
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            margin: 0;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            transition: all 0.3s ease;
-        }
+                <!-- CASO 2: WHITEPAPER WEB3 -->
+                <div class="portfolio-item">
+                    <span class="tag">Technical Review / DeFi</span>
+                    <div class="item-title">Optimización de Documentación Técnica — Protocolo Kinetix</div>
+                    <p><strong>Desafío:</strong> El borrador del Whitepaper de gobernanza fue redactado por los desarrolladores de la red. Tenía una sintaxis excesivamente informal y descuidos gramaticales que restaban seriedad ante firmas de capital de riesgo.</p>
+                    <p><strong>Solución:</strong> Corrección estilística y reestructuración de enunciados para proyectar autoridad institucional y claridad técnica.</p>
+                    <div class="comparison">
+                        <div class="comp-box box-before">
+                            <h5>Control de Calidad (Entrada)</h5>
+                            <p>Los contratos inteligentes hacen los swaps muy rápido y no tienen casi fallos automáticos para que no pierdas plata.</p>
+                        </div>
+                        <div class="comp-box box-after">
+                            <h5>Producción Final (Entregado)</h5>
+                            <p>Los contratos inteligentes ejecutan transacciones de intercambio automatizadas de alta velocidad, garantizando la mitigación de errores críticos y resguardando el capital del usuario.</p>
+                        </div>
+                    </div>
+                </div>
 
-        .container {
-            max-width: 680px;
-            width: 100%;
-            background: var(--bg-card);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px -10px var(--shadow);
-            box-sizing: border-box;
-            border: 1px solid var(--border-color);
-        }
+                <!-- CASO 3: REDACCIÓN WEB3 PARA REDES -->
+                <div class="portfolio-item">
+                    <span class="tag">Contenido de Alta Retención</span>
+                    <div class="item-title">Estrategia de Lanzamiento en X (Twitter) — Layer-2 Network</div>
+                    <p><strong>Desafío:</strong> Sintetizar una actualización muy compleja sobre la reducción de tarifas de gas en un hilo de X que capturara la atención de inversores institucionales y minoristas simultáneamente.</p>
+                    <p><strong>Solución:</strong> Redacción de un hilo técnico directo, estructurado con ganchos de lectura y libre de palabras de relleno.</p>
+                    <div class="comparison">
+                        <div class="comp-box box-before">
+                            <h5>Control de Calidad (Entrada)</h5>
+                            <p>Ya lanzamos la versión 2 de nuestra red. El gas va a ser mucho más barato y la velocidad va a ser más rápida desde hoy.</p>
+                        </div>
+                        <div class="comp-box box-after">
+                            <h5>Producción Final (Entregado)</h5>
+                            <p>El despliegue de nuestra Mainnet v2 es oficial. Reducimos los costes de gas en un 40% y optimizamos el procesamiento de bloques a 1.2 segundos. Descubre el impacto en tus transacciones. 👇</p>
+                        </div>
+                    </div>
+                </div>
 
-        h1 {
-            margin: 0 0 10px 0;
-            font-size: 28px;
-            font-weight: 800;
-            text-align: center;
-            letter-spacing: -0.5px;
-        }
+                <!-- CASO 4: CORPORATIVO / EMAIL MARKETING -->
+                <div class="portfolio-item">
+                    <span class="tag">Email Ops / Retención</span>
+                    <div class="item-title">Newsletter Semanal de Análisis Macroeconómico — CriptoAnalítica</div>
+                    <p><strong>Desafío:</strong> La tasa de apertura y retención de la firma caía debido a boletines redactados con expresiones demasiado coloquiales o alarmistas que no correspondían a un servicio de pago.</p>
+                    <p><strong>Solución:</strong> Reescritura bajo un estándar analítico, sobrio, enfocado en datos duros y proyecciones de mercado.</p>
+                    <div class="comparison">
+                        <div class="comp-box box-before">
+                            <h5>Control de Calidad (Entrada)</h5>
+                            <p>Hola a todos, el mercado hoy está re feo y cayendo pero acá les dejamos tres tips claves para que no pierdan su plata.</p>
+                        </div>
+                        <div class="comp-box box-after">
+                            <h5>Producción Final (Entregado)</h5>
+                            <p>A pesar de la volatilidad actual en los mercados financieros, identificamos tres tendencias estructurales clave para mitigar riesgos. Analizamos los datos en nuestro informe técnico semanal.</p>
+                        </div>
+                    </div>
+                </div>
 
-        .subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 35px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 22px;
-        }
-
-        label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Contenedor del campo de clave con el ojo */
-        .api-container {
-            position: relative;
-            width: 100%;
-        }
-
-        .api-container input {
-            padding-right: 50px;
-        }
-
-        .eye-btn {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 18px;
-            outline: none;
-        }
-
-        .eye-btn:hover {
-            color: var(--text-main);
-        }
-        /* Rejilla de Inputs Estilizada */
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        @media (max-width: 500px) {
-            .form-row { grid-template-columns: 1fr; }
-        }
-
-        input[type="text"], input[type="password"], select {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-input);
-            color: var(--text-main);
-            border-radius: 10px;
-            box-sizing: border-box;
-            font-size: 15px;
-            outline: none;
-            transition: all 0.2s;
-        }
-
-        input:focus, select:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 12px var(--accent-glow);
-        }
-
-        button.btn-primary {
-            width: 100%;
-            background: var(--accent);
-            color: #ffffff;
-            border: none;
-            padding: 16px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.2s;
-            box-shadow: 0 6px 20px var(--accent-glow);
-        }
-
-        button.btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
-        button.btn-primary:disabled {
-            background: var(--border-color);
-            color: var(--text-muted);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        .result-box {
-            margin-top: 35px;
-            padding: 24px;
-            background: var(--bg-input);
-            border-radius: 12px;
-            display: none;
-            border: 1px solid var(--border-color);
-        }
-
-        .result-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-        }
-
-        .result-box h3 { margin: 0; color: var(--success); font-size: 16px; font-weight: 700; }
-
-        .action-buttons { display: flex; gap: 8px; }
-
-        .btn-action {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-action:hover { border-color: var(--accent); }
-
-        .output-text { white-space: pre-line; font-size: 14px; line-height: 1.7; color: var(--text-main); }
-        
-        .output-media { display: none; max-width: 100%; border-radius: 10px; margin-top: 15px; border: 1px solid var(--border-color); }
-
-        .footer-branding {
-            margin-top: 40px;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            padding-top: 25px;
-            font-size: 13px;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-        .footer-branding a { color: var(--accent); text-decoration: none; font-weight: 700; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>🚀 CreadorTools AI Pro</h1>
-    <p class="subtitle">Ecosistema universal multimedia controlado por llaves distribuidas</p>
-    
-    <!-- Módulo de la API Key con Ojo -->
-    <div class="form-group">
-        <label for="apiKey">Tu OpenRouter API Key (sk-or-v1-...)</label>
-        <div class="api-container">
-            <input type="password" id="apiKey" placeholder="Pega tu clave criptográfica para activar el sistema">
-            <button class="eye-btn" onclick="toggleApiVisibility()" id="eyeBtn">👁️</button>
-        </div>
-    </div>
-
-    <!-- Menú de Configuración de la Interfaz y Filtros -->
-    <div class="form-row">
-        <div class="form-group">
-            <label for="themeSelect">🎨 Personalizar Interfaz (Temas)</label>
-            <select id="themeSelect" onchange="changeAppTheme()">
-                <option value="blue">Azul Corporativo (Defecto)</option>
-                <option value="emerald">Neón Esmeralda</option>
-                <option value="purple">Morado Cyberpunk</option>
-                <option value="orange">Naranja Fuego</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="tool-type">🤖 Motor de Inteligencia Artificial</label>
-            <select id="tool-type">
-                <option value="text">Generación de Texto & Copys (Llama 3.1)</option>
-                <option value="code">Asistente de Programación & Código (DeepSeek)</option>
-                <option value="image">Diseño de Imágenes & Arte (Flux AI)</option>
-                <option value="video">Estructurador Cinematográfico & Video</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="topic">Instrucción (Prompt) o Descripción de la Tarea</label>
-        <input type="text" id="topic" placeholder="Ej: Crea una función en JS / Genera imagen de playa cyberpunk...">
-    </div>
-
-    <button id="btnGenerate" class="btn-primary" onclick="processUniversalAI()">Ejecutar Comando Inteligente ⚡</button>
-
-    <div id="resultBox" class="result-box">
-        <div class="result-header">
-            <h3>✨ Resultado de la Operación:</h3>
-            <div class="action-buttons">
-                <button class="btn-action" onclick="copyToClipboard()">📋 Copiar</button>
-                <button class="btn-action" style="color:#ef4444;" onclick="clearOutput()">🗑️ Limpiar</button>
+                <!-- CASO 5: INFRAESTRUCTURA DE DOCUMENTACIÓN -->
+                <div class="portfolio-item">
+                    <span class="tag">Markdown Técnico</span>
+                    <div class="item-title">Manual de Integración API para Desarrolladores — DevSaaS</div>
+                    <p><strong>Desafío:</strong> El manual existente provocaba demasiados tickets de soporte porque las instrucciones de conexión eran ambiguas y estaban mal formateadas en texto plano.</p>
+                    <p><strong>Solución:</strong> Maquetación e ingeniería de texto utilizando Markdown estructurado para una lectura técnica ágil en repositorios o GitBook.</p>
+                    <div class="comparison">
+                        <div class="comp-box box-before">
+                            <h5>Control de Calidad (Entrada)</h5>
+                            <p>Dale click al botón de conectar arriba a la derecha y luego acepta el cartelito de Metamask para que te deje entrar.</p>
+                        </div>
+                        <div class="comp-box box-after">
+                            <h5>Producción Final (Entregado)</h5>
+                            <p>### Paso 1: Vinculación de Billetera<br>Seleccione **Conectar Billetera** en el margen superior derecho. Apruebe la solicitud de firma digital en la extensión del navegador (ej. MetaMask).</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="outputText" class="output-text">Procesando...</div>
-        <img id="outputImage" class="output-media" src="" alt="Resultado de Imagen">
-    </div>
+        </section>
 
-    <div class="footer-branding">
-        <p>Ecosistema autónomo cliente-servidor. Diseñado de forma honesta desde Venezuela.</p>
-        <p>👉 <strong><a href="https://t.me" target="_blank">Únete a nuestra comunidad de Telegram</a></strong></p>
-    </div>
-</div>
-<script>
-// Forzar tema azul inicial por defecto al cargar
-document.documentElement.setAttribute("data-theme", "blue");
+        <section class="cta-box">
+            <div class="cta-inner">
+                <h3>¿Necesitas textos perfectos hoy mismo?</h3>
+                <p>Delega tus borradores. Recibe activos editoriales profesionales listos para publicar.</p>
+                <a href="https://laborx.com" class="btn-neon">Contratar en LaborX</a>
+            </div>
+        </section>
+    </main>
 
-// Función interactiva para cambiar el color de acento del sistema en vivo
-function changeAppTheme() {
-    const selectedTheme = document.getElementById('themeSelect').value;
-    document.documentElement.setAttribute("data-theme", selectedTheme);
-}
-
-// Función del botón del Ojo (Mostrar/Ocultar clave)
-function toggleApiVisibility() {
-    const apiInput = document.getElementById('apiKey');
-    const eyeBtn = document.getElementById('eyeBtn');
-    if (apiInput.type === "password") {
-        apiInput.type = "text";
-        eyeBtn.innerText = "🙈";
-    } else {
-        apiInput.type = "password";
-        eyeBtn.innerText = "👁️";
-    }
-}
-
-function copyToClipboard() {
-    const text = document.getElementById('outputText').innerText;
-    navigator.clipboard.writeText(text).then(() => { alert("¡Copiado con éxito! 📋"); });
-}
-
-function clearOutput() {
-    document.getElementById('resultBox').style.display = "none";
-    document.getElementById('topic').value = "";
-    document.getElementById('outputImage').style.display = "none";
-    document.getElementById('outputText').style.display = "block";
-}
-
-// MOTOR DE ENRUTAMIENTO MULTI-MODAL CON CLAVE DE USUARIO
-async function processUniversalAI() {
-    const apiKey = document.getElementById('apiKey').value.trim();
-    const topic = document.getElementById('topic').value.trim();
-    const type = document.getElementById('tool-type').value;
-    const resultBox = document.getElementById('resultBox');
-    const outputText = document.getElementById('outputText');
-    const outputImage = document.getElementById('outputImage');
-    const btn = document.getElementById('btnGenerate');
-
-    if (!apiKey) { alert("Por favor, introduce tu API Key para poder operar."); return; }
-    if (!topic) { alert("Por favor, introduce una instrucción clara."); return; }
-
-    btn.disabled = true;
-    btn.innerText = "Procesando orden con el clúster... 🧠";
-    resultBox.style.display = "block";
-    outputImage.style.display = "none";
-    outputText.style.display = "block";
-    outputText.innerText = "Autenticando clave y ejecutando comandos dedicados...";
-
-    // CASO MULTIMEDIA: GENERACIÓN DE IMÁGENES (FLUX)
-    if (type === "image") {
-        try {
-            const seed = Math.floor(Math.random() * 99999);
-            const imageUrl = `https://pollinations.ai{encodeURIComponent(topic)}?width=1024&height=1024&nologo=true&seed=${seed}`;
-            outputText.style.display = "none";
-            outputImage.src = imageUrl;
-            outputImage.style.display = "block";
-            outputImage.onload = function() {
-                btn.disabled = false;
-                btn.innerText = "Ejecutar Comando Inteligente ⚡";
-            };
-            return;
-        } catch (e) {
-            outputText.innerText = "Fallo en el procesador gráfico: " + e.message;
-            btn.disabled = false;
-            btn.innerText = "Ejecutar Comando Inteligente ⚡";
-            return;
-        }
-    }
-
-    // CASOS DE TEXTO: CONFIGURACIÓN DE PROMPTS SEGÚN SELECCIÓN
-    let modelSelected = "meta-llama/llama-3.1-8b-instruct:free";
-    let systemRole = "Eres un asistente de Inteligencia Artificial corporativo. Respondes siempre directo al grano, de forma estructurada y profesional en español.";
-    let finalPrompt = topic;
-
-    if (type === "code") {
-        systemRole = "Eres un Ingeniero de Software experto. Devuelves únicamente bloques de código limpios, optimizados y comentarios estrictamente técnicos en el lenguaje solicitado.";
-    } else if (type === "video") {
-        finalPrompt = `Actúa como director cinematográfico y guionista experto. Crea la estructura técnica completa de escenas [Video], transiciones y diálogos de locución para un video de alta retención basado en: "${topic}".`;
-    }
-
-    try {
-        const response = await fetch("https://openrouter.ai", {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${apiKey}`,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                model: modelSelected,
-                messages: [
-                    { role: "system", content: systemRole },
-                    { role: "user", content: finalPrompt }
-                ]
-            })
-        });
-
-        const data = await response.json();
-        
-        if (data && data.choices && data.choices[0].message) {
-            outputText.innerText = data.choices[0].message.content.trim();
-        } else if (data.error) {
-            outputText.innerText = `Fallo en el Servidor de API Key:\n${data.error.message}\nVerifica tus límites de cuota en OpenRouter.`;
-        } else {
-            outputText.innerText = "El nodo remoto no devolvió datos legibles. Reintenta la operación.";
-        }
-
-    } catch (error) {
-        outputText.innerText = "Error de red crítico en los canales cifrados: " + error.message;
-    } finally {
-        btn.disabled = false;
-        btn.innerText = "Ejecutar Comando Inteligente ⚡";
-    }
-}
-</script>
-</body>
-</html>
+    <footer style="text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-neon); margin-top: 80px;">
+        <p>&copy; 2026 Nexus Syntax Solutions. Todos los derechos reservados.</p>
+        <p style="font-family: 'Courier New', Courier, monospace; color: #1e3a8a;">// HIGH-PRECISION CONTENT OPERATIONS // LATAM & SPAIN MARKET</p>
+    </footer>
